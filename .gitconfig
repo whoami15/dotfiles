@@ -1,0 +1,25 @@
+[commit]
+	gpgsign = true
+[user]
+	signingkey = 8D01DC5F1D59C030
+	email = experth6@gmail.com
+	name = Daryl Ferrer Legion
+[alias]
+	lola = log --graph --oneline --decorate --all
+	logo = log --oneline
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[core]
+	excludesFile = ~/.gitignore_global
+[push]
+	autosetupremote = true
+	default = current
+[rerere]
+	enabled = true
+[fetch]
+	prune = true
