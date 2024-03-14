@@ -131,6 +131,9 @@ alias mfs="artisan migrate:fresh --seed"
 alias tinker="artisan tinker"
 alias serve="artisan serve"
 
+# IP addresses
+alias ip="curl ifconfig.me/ip ; echo"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
