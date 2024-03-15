@@ -36,6 +36,7 @@ cask "onyx"
 cask "phpmon"
 cask "phpstorm"
 cask "redisinsight"
+cask "spotify"
 cask "tableplus"
 cask "visual-studio-code"
 
