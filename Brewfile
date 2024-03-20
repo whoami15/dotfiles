@@ -22,6 +22,7 @@ brew "redis"
 brew "shivammathur/extensions/xdebug@8.2"
 brew "shivammathur/extensions/xdebug@8.4"
 brew "shivammathur/php/php@8.4"
+brew "stripe/stripe-cli/stripe"
 
 # Apps
 cask "appcleaner"
