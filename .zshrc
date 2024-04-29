@@ -106,6 +106,7 @@ alias copyssh="pbcopy < ~/.ssh/id_ed25519.pub"
 # Directories
 alias workspace="cd ~/Workspace/"
 alias gwd="pwd | pbcopy"
+alias ll="ls -lah"
 
 # Git
 alias gst="git status"
