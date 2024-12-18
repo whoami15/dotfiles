@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git git-trim zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -132,17 +132,32 @@ alias mfs="artisan migrate:fresh --seed"
 alias tinker="artisan tinker"
 alias serve="artisan serve"
 
-# IP addresses
+# Queue
+queue() {
+    if [ $# -eq 0 ]; then
+        php artisan queue:listen
+    else
+        php artisan queue:listen --queue="$1"
+    fi
+}
+
+# IP
 alias ip="curl ifconfig.me/ip ; echo"
 
 # ngrok
 if command -v ngrok &>/dev/null; then
-    eval "$(ngrok completion)"
+  eval "$(ngrok completion)"
 fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+fpath=(~/.stripe $fpath)
+autoload -Uz compinit && compinit -i
+
+export PATH="/Users/Shared/DBngin/mysql/8.0.33/bin:$PATH"
+export MYSQL_UNIX_PORT="/tmp/mysql_3306.sock"
 
 export GPG_TTY=$(tty)
 
