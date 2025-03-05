@@ -13,7 +13,7 @@ brew "gnupg"
 brew "nginx"
 brew "node"
 brew "nvm"
-brew "php", link: false
+brew "php"
 brew "php@8.1"
 brew "php@8.2"
 brew "pinentry-mac"
@@ -21,9 +21,10 @@ brew "pnpm"
 brew "redis"
 brew "shivammathur/extensions/event@8.3"
 brew "shivammathur/extensions/xdebug@8.3"
+brew "shivammathur/extensions/xdebug@8.4"
 brew "shivammathur/php/php@7.3"
 brew "shivammathur/php/php@8.0"
-brew "shivammathur/php/php@8.3", link: false
+brew "shivammathur/php/php@8.3"
 brew "stripe/stripe-cli/stripe"
 
 # Apps
